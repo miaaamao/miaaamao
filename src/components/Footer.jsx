@@ -4,6 +4,7 @@ import "../style.css";
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
+  
   return (
     <>
       <footer className="px-4">

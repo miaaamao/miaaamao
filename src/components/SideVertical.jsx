@@ -9,6 +9,10 @@ function SideVertical(props) {
   var directDown;
   const { pathname } = useLocation();
   const date = new Date().toISOString().slice(0, 10);
+  const dateOfWeek = new Date().getDay();
+  const dayOfWeekList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const dateOfWeekInWord = dayOfWeekList[dateOfWeek];
+  const dateFormat = date.slice(5, 7) + "-" + date.slice(8, 10) + "-" + date.slice(0, 4);
 
   switch (pathname) {
     case "/":
@@ -46,7 +50,6 @@ function SideVertical(props) {
     default:
   }
 
-  // Direct Up
   switch (pathname) {
     case "/":
       directUp = "/contact";
@@ -75,7 +78,6 @@ function SideVertical(props) {
     default:
   }
 
-  // Direct Down
   switch (pathname) {
     case "/":
       directDown = "/about";
@@ -109,7 +111,7 @@ function SideVertical(props) {
       <div className="side-vertical">
         <div className="upper-side d-flex">
           <p className="side-title">{titlePage}</p>
-          <p className="side-date">{date}</p>
+          <p className="side-date">{dateOfWeekInWord} - {dateFormat}</p>
         </div>
         <div className="lower-side d-flex">
           <p className="side-number">
