@@ -20,11 +20,11 @@ function CourseTaken() {
                 </div>
                 <div className="courses-section">
                     <div className="university-course-section">
-                        <h4 className="text-center">Courses taken at Duke University</h4>
+                        <h4 className="text-center">Courses taken at <a href="https://www.fuqua.duke.edu/" target="blank" style={{ textDecoration: 'none', cursor: 'pointer', color: '#00539c'}}>Duke University</a></h4> <br/>
                         {renderCourses("Duke")}
                     </div>
                     <div className="university-course-section">
-                        <h4 className="text-center">Courses taken at University of California, Santa Barbara</h4>
+                        <h4 className="text-center">Courses taken at <a href="https://www.ucsb.edu/" target="blank" style={{ textDecoration: 'none', cursor: 'pointer', color: '#003660'}}>University of California, Santa Barbara</a></h4> <br/>
                         {renderCourses("UCSB")}
                     </div>
                 </div>

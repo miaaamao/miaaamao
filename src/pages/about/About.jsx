@@ -10,24 +10,40 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { Document, Page } from 'react-pdf';
 
 function About() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [numPages, setNumPages] = useState(null);
+
   const [showDukeModal, setShowDukeModal] = useState(false);
-  const [dukeNumPages, setDukeNumPages] = useState(null);
-  const [dukeCurrentPage, setDukeCurrentPage] = useState(1);
   const [dukeIsDiplomaPreviewVisible, setDukeIsDiplomaPreviewVisible] = useState(false);
 
   const showDukeDiplomaPreview = () => setDukeIsDiplomaPreviewVisible(true);
   const hideDukeDiplomaPreview = () => setDukeIsDiplomaPreviewVisible(false);
+  const handleDukeDiplomaModalShow = () => setShowDukeModal(true);
+  const handleDukeDiplomaModalClose = () => setShowDukeModal(false);
 
   const [showUCSBModal, setShowUCSBModal] = useState(false);
-  const [ucsbNumPages, setUCSBNumPages] = useState(null);
-  const [ucsbCurrentPage, setUCSBCurrentPage] = useState(1);
   const [ucsbIsDiplomaPreviewVisible, setUCSBIsDiplomaPreviewVisible] = useState(false);
 
   const showUCSBDiplomaPreview = () => setUCSBIsDiplomaPreviewVisible(true);
   const hideUCSBDiplomaPreview = () => setUCSBIsDiplomaPreviewVisible(false);
+  const handleUCSBDiplomaModalShow = () => setShowUCSBModal(true);
+  const handleUCSBDiplomaModalClose = () => setShowUCSBModal(false);
   
-  const onDukeDocumentLoadSuccess = ({ numPages }) => setDukeNumPages(numPages);
-  const onUCSBDocumentLoadSuccess = ({ numPages }) => setUCSBNumPages(numPages);
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const goToNextPage = () => {
+    if (currentPage < numPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <>
@@ -43,12 +59,12 @@ function About() {
         </div>
         <div className="about-right">
           <p className="home-about-body">
-            Hi, I'm Mia Mao, I recently graduated from <span onMouseEnter={showDukeDiplomaPreview} onMouseLeave={hideDukeDiplomaPreview} onClick={showDukeDiplomaPreview} style={{ cursor: 'pointer', color: '#00539c' }}>Duke University</span>
+            Hi, I'm Mia Mao, I recently graduated from <span onMouseEnter={showDukeDiplomaPreview} onMouseLeave={hideDukeDiplomaPreview} onClick={handleDukeDiplomaModalShow} style={{ cursor: 'pointer', color: '#00539c' }}>Duke University</span>
             {dukeIsDiplomaPreviewVisible && (
               <div className="duke-img-preview">
                 <img src={DukeDiplomaPreviewImage} alt="Duke Diploma Preview" style={{ width: '100px', height: 'auto' }}/>
               </div>
-            )} with a MS in Quantitative Management in Business Analytics, Finance Track, and from <span onMouseEnter={showUCSBDiplomaPreview} onMouseLeave={hideUCSBDiplomaPreview} onClick={showUCSBDiplomaPreview} style={{ cursor: 'pointer', color: '#003660' }}>University of California, Santa Barbara</span>
+            )} with a MS in Quantitative Management in Business Analytics, Finance Track, and from <span onMouseEnter={showUCSBDiplomaPreview} onMouseLeave={hideUCSBDiplomaPreview} onClick={handleUCSBDiplomaModalShow} style={{ cursor: 'pointer', color: '#003660' }}>University of California, Santa Barbara</span>
             {ucsbIsDiplomaPreviewVisible && (
               <div className="ucsb-img-preview">
                 <img src={UCSBDiplomaPreviewImage} alt="UCSB Diploma Preview" style={{ width: '100px', height: 'auto' }}/>
@@ -58,47 +74,51 @@ function About() {
           </p>
         </div>
 
-        <Modal show={showDukeModal} onHide={() => setShowDukeModal(false)} size="lg">
+        <Modal show={showDukeModal} onHide={handleDukeDiplomaModalClose} size="lg">
           <Modal.Header closeButton>
-            <Modal.Title>Duke University Diploma</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Document file={DukeDiploma} onLoadSuccess={onDukeDocumentLoadSuccess}>
-              <Page pageNumber={dukeCurrentPage} />
-              <div className="pdf-navigation">
-                {dukeCurrentPage > 1 && (
-                  <AiOutlineLeft onClick={() => setDukeCurrentPage(dukeCurrentPage - 1)} />
+              <Modal.Title>My Duke Diploma</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <div className="pdf-viewer-container">
+                {currentPage > 1 && (
+                  <AiOutlineLeft className="pdf-nav-arrow left-arrow" onClick={goToPreviousPage} />
                 )}
-                {dukeCurrentPage < dukeNumPages && (
-                  <AiOutlineRight onClick={() => setDukeCurrentPage(dukeCurrentPage + 1)} />
+                <Document file={DukeDiploma} onLoadSuccess={onDocumentLoadSuccess}>
+                  <Page pageNumber={currentPage} />
+                </Document>
+                {currentPage < numPages && (
+                  <AiOutlineRight className="pdf-nav-arrow right-arrow" onClick={goToNextPage} />
                 )}
               </div>
-            </Document>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowDukeModal(false)}>Close</Button>
-          </Modal.Footer>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleDukeDiplomaModalClose}>
+                Close
+              </Button>
+            </Modal.Footer>
         </Modal>
 
-        <Modal show={showUCSBModal} onHide={() => setShowUCSBModal(false)} size="lg">
+        <Modal show={showUCSBModal} onHide={handleUCSBDiplomaModalClose} size="lg">
           <Modal.Header closeButton>
-            <Modal.Title>UCSB Diploma</Modal.Title>
+            <Modal.Title>My UCSB Diploma</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Document file={UCSBDiploma} onLoadSuccess={onUCSBDocumentLoadSuccess}>
-              <Page pageNumber={ucsbCurrentPage} />
-              <div className="pdf-navigation">
-                {ucsbCurrentPage > 1 && (
-                  <AiOutlineLeft onClick={() => setUCSBCurrentPage(ucsbCurrentPage - 1)} />
-                )}
-                {ucsbCurrentPage < ucsbNumPages && (
-                  <AiOutlineRight onClick={() => setUCSBCurrentPage(ucsbCurrentPage + 1)} />
-                )}
-              </div>
-            </Document>
+            <div className="pdf-viewer-container">
+              {currentPage > 1 && (
+                <AiOutlineLeft className="pdf-nav-arrow left-arrow" onClick={goToPreviousPage} />
+              )}
+              <Document file={UCSBDiploma} onLoadSuccess={onDocumentLoadSuccess}>
+                <Page pageNumber={currentPage} />
+              </Document>
+              {currentPage < numPages && (
+                <AiOutlineRight className="pdf-nav-arrow right-arrow" onClick={goToNextPage} />
+              )}
+            </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowUCSBModal(false)}>Close</Button>
+            <Button variant="secondary" onClick={handleDukeDiplomaModalClose}>
+              Close
+            </Button>
           </Modal.Footer>
         </Modal>
       </Container>

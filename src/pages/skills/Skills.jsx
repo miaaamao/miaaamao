@@ -2,6 +2,7 @@ import { Container } from 'react-bootstrap';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../style.css';
 import { Col, Row } from "react-bootstrap";
+import { Tooltip } from 'react-tooltip';
 import Python from '../../assets/img/techstack/python.png';
 import RLang from '../../assets/img/techstack/rlang.png';
 import SQL from '../../assets/img/techstack/sql.png';
@@ -27,28 +28,34 @@ function Skills() {
         <div className="skills-right">
           <Row style={{ justifyContent: "center"}}>
             <Col xs={4} md={2} className="tech-icons">
-                <img src={Python} length={150} width={150} title="Python" alt="python"/>
+                <img src={Python} length={150} width={150} alt="python" data-tooltip-id="python" data-tooltip-content="Python"/>
             </Col>
+            <Tooltip id="python"/>
 
             <Col xs={4} md={2} className="tech-icons">
-                <img src={RLang} length={150} width={150} title="R" alt="r"/>
+                <img src={RLang} length={150} width={150} alt="r" data-tooltip-id="r" data-tooltip-content="R"/>
             </Col>
+            <Tooltip id="r"/>
 
             <Col xs={4} md={2} className="tech-icons">
-                <img src={SQL} length={150} width={150} title="SQL" alt="sql"/>
+                <img src={SQL} length={150} width={150} alt="sql" data-tooltip-id="sql" data-tooltip-content="SQL"/>
             </Col>
+            <Tooltip id="sql"/>
 
             <Col xs={4} md={2} className="tech-icons">
-                <img src={PowerBI} length={150} width={150} title="PowerBI" alt="powerbi"/>
+                <img src={PowerBI} length={150} width={150} alt="power-bi" data-tooltip-id="power-bi" data-tooltip-content="Power-Bi"/>
             </Col>
+            <Tooltip id="power-bi"/>
 
             <Col xs={4} md={2} className="tech-icons">
-                <img src={Tableau} length={150} width={150} title="Tableau" alt="tableau"/>
+                <img src={Tableau} length={150} width={150} alt="tableau" data-tooltip-id="tableau" data-tooltip-content="Tableau"/>
             </Col>
+            <Tooltip id="tableau"/>
 
             <Col xs={4} md={2} className="tech-icons">
-                <img src={Excel} length={150} width={150} title="Excel" alt="excel"/>
+                <img src={Excel} length={150} width={150} alt="excel" data-tooltip-id="excel" data-tooltip-content="Excel"/>
             </Col>
+            <Tooltip id="excel"/>
           </Row>
           <br /> <br /> <br /> <br /> <br /> <br /> <br />
         </div>

@@ -49,6 +49,87 @@ img.home-image {
     width: 400px;
 }
 
+@media (max-width: 1170px) {
+  .home-wrapper {
+      margin: 0 !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-wrapper {
+      margin: 80px 0 80px 0 !important;
+      text-align: center;
+      display: block;
+  }
+
+  .home-left, .home-right {
+      padding-left: 24px;
+      padding-right: 24px;
+  }
+
+  .home-left h2 {
+      font-size: 60px;
+      margin-bottom: 14px;
+  }
+
+  .home-right {
+      display: none !important;
+  }
+
+  a.connect-download {
+      margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-left h2 {
+      font-size: 50px;
+      line-height: 70px;
+  }
+
+  .home-left h3 {
+      font-size: 26px;
+  }
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+      transform: rotate(0deg);
+  }
+  10% {
+      transform: rotate(14deg);
+  }
+  20% {
+      transform: rotate(-8deg);
+  }
+  30% {
+      transform: rotate(14deg);
+  }
+  40% {
+      transform: rotate(-4deg);
+  }
+  50% {
+      transform: rotate(10deg);
+  }
+  60% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+/* --------- */
+/* Buttons */
+/* --------- */
 .connect-download {
     width: 200px;
     padding: 12px 8px;
@@ -68,83 +149,26 @@ img.home-image {
     background-color: var(--third-color);
     box-shadow: 0px 0px transparent;
 }
-
-@media (max-width: 1170px) {
-    .home-wrapper {
-        margin: 0 !important;
-    }
+.pdf-viewer-container {
+  position: relative;
 }
 
-@media (max-width: 992px) {
-    .home-wrapper {
-        margin: 80px 0 80px 0 !important;
-        text-align: center;
-        display: block;
-    }
-
-    .home-left, .home-right {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-
-    .home-left h2 {
-        font-size: 60px;
-        margin-bottom: 14px;
-    }
-
-    .home-right {
-        display: none !important;
-    }
-
-    a.connect-download {
-        margin: auto;
-    }
+.pdf-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  z-index: 2;
 }
 
-@media (max-width: 576px) {
-    .home-left h2 {
-        font-size: 50px;
-        line-height: 70px;
-    }
-
-    .home-left h3 {
-        font-size: 26px;
-    }
+.left-arrow {
+  left: 10px;
 }
 
-.wave {
-    animation-name: wave-animation;
-    animation-duration: 2.1s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(14deg);
-    }
-    20% {
-        transform: rotate(-8deg);
-    }
-    30% {
-        transform: rotate(14deg);
-    }
-    40% {
-        transform: rotate(-4deg);
-    }
-    50% {
-        transform: rotate(10deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+.right-arrow {
+  right: 10px;
 }
 
 /* --------- */
