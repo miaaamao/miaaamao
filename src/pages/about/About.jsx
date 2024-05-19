@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Container, Modal, Button } from 'react-bootstrap';
 import '../../style.css';
-import DukeDiploma from "../../assets/diploma/UW-Madison Diploma.pdf";
-import UCSBDiploma from "../../assets/diploma/UW-Madison Diploma.pdf";
-import DukeDiplomaPreviewImage from "../../assets/diploma/UW-Madison Diploma Preview.png";
-import UCSBDiplomaPreviewImage from "../../assets/diploma/UW-Madison Diploma Preview.png";
+import DukeDiploma from "../../assets/diploma/Duke Diploma.pdf";
+import UCSBDiploma from "../../assets/diploma/UCSB Diploma.pdf";
+import DukeDiplomaPreviewImage from "../../assets/diploma/Duke Diploma Preview.png";
+import UCSBDiplomaPreviewImage from "../../assets/diploma/UCSB Diploma Preview.png";
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { Document, Page } from 'react-pdf';
 
@@ -116,7 +116,7 @@ function About() {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleDukeDiplomaModalClose}>
+            <Button variant="secondary" onClick={handleUCSBDiplomaModalClose}>
               Close
             </Button>
           </Modal.Footer>
