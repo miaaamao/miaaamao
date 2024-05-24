@@ -38,15 +38,17 @@ function ResumeNew() {
                 </Row>
 
                 <Row>
-                    <Button
-                        variant="dark"
-                        href={Resume}
-                        target="_blank"
-                        style={{ maxWidth: "250px", zIndex: 1 }}
-                    >
-                        <AiOutlineDownload />
-                        &nbsp;Download CV
-                    </Button>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Button
+                            variant="dark"
+                            href={Resume}
+                            target="_blank"
+                            style={{ maxWidth: "250px", zIndex: 1}}
+                        >
+                            <AiOutlineDownload />
+                            Download CV
+                        </Button>
+                    </div>
                 </Row> 
                 <br /> <br /> <br /> <br /> <br /> <br /> <br />
             </Container>
