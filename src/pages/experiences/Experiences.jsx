@@ -23,6 +23,7 @@ function Experiences() {
                         ───&nbsp;&nbsp;Page <strong>03</strong>
                     </h4>
                 </div>
+                <br /> 
                 <VerticalTimeline lineColor="#F5F5F5"> 
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
@@ -37,7 +38,7 @@ function Experiences() {
                         <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={McKinsey} width={140} height={140} alt="McKinsey"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Beijing, China</h4>
                         <p>
-                        Analyzed client group segments using Salesforce CRM and Excel, identifying barriers in Citi's services. Recommendations from this analysis led to a 25% improvement in customer satisfaction.
+                            Analyzed client group segments using Salesforce CRM and Excel, identifying barriers in Citi's services. Recommendations from this analysis led to a 25% improvement in customer satisfaction.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
@@ -49,6 +50,7 @@ function Experiences() {
                         contentStyle={{ border: '#accce6', boxShadow: '4px 5px 4px 3px #a7cbe8' }}
                         contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
                         iconStyle={{ background: '#75aadb', color: '#fff' }}
+                        position='right'
                         icon={<MdWorkOutline />}
                     >
                         <h3 className="vertical-timeline-element-title">Business Analysis Intern</h3>

@@ -11,12 +11,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
 :root {
-  --first-color: #1c658c;
-  --second-color: #398ab9;
-  --third-color: #d8d2cb;
-  --fourth-color: #eeeeee;
-  --five-color: #e1c16e;
-  --six-color: #0d6efd;
+  --first-color: #5B7DB1; /* Moderate Blue */
+  --second-color: #8DB1D3; /* Lighter Blue */
+  --third-color: #F2F4F8; /* Light Grey */
+  --fourth-color: #F0F8FF; /* Alice Blue */
+  --five-color: #C7D2E9; /* Light Lavender Blue */
+  --six-color: #A6DCEF; /* Light Aqua */
 }
 
 * {
