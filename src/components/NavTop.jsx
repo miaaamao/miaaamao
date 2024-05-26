@@ -5,6 +5,7 @@ import { FaAlignRight } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 import "../style.css";
+import Logo from "../assets/logo.png";
 
 function NavTop() {
   const [toogleMenu, setToogleMenu] = useState(false);
@@ -64,7 +65,11 @@ function NavTop() {
         <Container fluid className="px-4">
           <Navbar.Brand className="navtop-brand">
             <Link to="/">
-              Mia
+              <img 
+                src={Logo} 
+                alt="Mia's Portfolio" 
+                style={{height: 60, width: 60}}
+              />
             </Link>
           </Navbar.Brand>
           <button className="toogle-menu" onClick={toogleOpen}>
