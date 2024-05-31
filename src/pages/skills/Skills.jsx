@@ -9,6 +9,9 @@ import SQL from '../../assets/img/techstack/sql.png';
 import Tableau from '../../assets/img/techstack/tableau.png';
 import PowerBI from '../../assets/img/techstack/powerbi.png';
 import Excel from '../../assets/img/techstack/excel.png';
+import PyTorch from '../../assets/img/techstack/pytorch.png';
+import MySQL from '../../assets/img/techstack/mysql.png';
+import MariaDB from '../../assets/img/techstack/mariadb.png';
 
 function Skills() {
   return (
@@ -51,6 +54,21 @@ function Skills() {
                 <img src={Tableau} length={150} width={150} alt="tableau" data-tooltip-id="tableau" data-tooltip-content="Tableau"/>
             </Col>
             <Tooltip id="tableau"/>
+
+            <Col xs={4} md={2} className="tech-icons">
+                <img src={PyTorch} length={150} width={150} alt="pytorch" data-tooltip-id="pytorch" data-tooltip-content="PyTorch"/>
+            </Col>
+            <Tooltip id="pytorch"/>
+
+            <Col xs={4} md={2} className="tech-icons">
+                <img src={MySQL} length={150} width={150} alt="mysql" data-tooltip-id="mysql" data-tooltip-content="MySQL"/>
+            </Col>
+            <Tooltip id="mysql"/>
+
+            <Col xs={4} md={2} className="tech-icons">
+                <img src={MariaDB} length={150} width={150} alt="mariadb" data-tooltip-id="mariadb" data-tooltip-content="MariaDB"/>
+            </Col>
+            <Tooltip id="mariadb"/>
 
             <Col xs={4} md={2} className="tech-icons">
                 <img src={Excel} length={150} width={150} alt="excel" data-tooltip-id="excel" data-tooltip-content="Excel"/>

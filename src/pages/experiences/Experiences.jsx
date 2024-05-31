@@ -31,6 +31,7 @@ function Experiences() {
                         contentStyle={{ border: '#accce6', boxShadow: '4px 5px 4px 3px #a7cbe8' }}
                         contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
                         iconStyle={{ background: '#75aadb', color: '#fff' }}
+                        position='left'
                         icon={<MdWorkOutline />}
                     >
                         <h3 className="vertical-timeline-element-title">Business Analysis Intern</h3>
@@ -70,6 +71,7 @@ function Experiences() {
                         contentStyle={{ border: '#accce6', boxShadow: '4px 5px 4px 3px #a7cbe8' }}
                         contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
                         iconStyle={{ background: '#75aadb', color: '#fff' }}
+                        position='left'
                         icon={<MdWorkOutline />}
                     >
                         <h3 className="vertical-timeline-element-title">Business Analysis Intern</h3>
