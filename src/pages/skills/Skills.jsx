@@ -1,7 +1,8 @@
-import { Container } from 'react-bootstrap';
+import React from "react";
+import { Container } from "react-bootstrap";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../style.css';
-import { Col, Row } from "react-bootstrap";
+
 import { Tooltip } from 'react-tooltip';
 import Python from '../../assets/img/techstack/python.png';
 import RLang from '../../assets/img/techstack/rlang.png';
@@ -29,86 +30,44 @@ function Skills() {
       <Container fluid className="skills-wrapper">
         <div className="skills-left animate__animated animate__zoomIn">
           <h3>Skills</h3>
-          <h4>
-            ───&nbsp;&nbsp;Page <strong>06</strong>
-          </h4>
+          <h4>───&nbsp;&nbsp;Page <strong>06</strong></h4>
         </div>
-        <div className="skills-right">
-          <Row style={{ justifyContent: "center"}}>
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={Python} length={150} width={150} alt="python" data-tooltip-id="python" data-tooltip-content="Python"/>
-            </Col>
-            <Tooltip id="python"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={RLang} length={150} width={150} alt="r" data-tooltip-id="r" data-tooltip-content="R"/>
-            </Col>
-            <Tooltip id="r"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={SQL} length={150} width={150} alt="sql" data-tooltip-id="sql" data-tooltip-content="SQL"/>
-            </Col>
-            <Tooltip id="sql"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={PowerBI} length={150} width={150} alt="power-bi" data-tooltip-id="power-bi" data-tooltip-content="Power-Bi"/>
-            </Col>
-            <Tooltip id="power-bi"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={Tableau} length={150} width={150} alt="tableau" data-tooltip-id="tableau" data-tooltip-content="Tableau"/>
-            </Col>
-            <Tooltip id="tableau"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={Snowflake} length={150} width={150} alt="snowflake" data-tooltip-id="snowflake" data-tooltip-content="Snowflake"/>
-            </Col>
-            <Tooltip id="snowflake"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={SAS} length={150} width={150} alt="sas" data-tooltip-id="sas" data-tooltip-content="SAS"/>
-            </Col>
-            <Tooltip id="sas"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={SPSS} length={150} width={150} alt="spss" data-tooltip-id="spss" data-tooltip-content="SPSS"/>
-            </Col>
-            <Tooltip id="spss"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={LaTex} length={150} width={150} alt="latex" data-tooltip-id="latex" data-tooltip-content="LaTex"/>
-            </Col>
-            <Tooltip id="latex"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={MySQL} length={150} width={150} alt="mysql" data-tooltip-id="mysql" data-tooltip-content="MySQL"/>
-            </Col>
-            <Tooltip id="mysql"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={SQLServer} length={150} width={150} alt="sql server" data-tooltip-id="sql server" data-tooltip-content="SQL Server"/>
-            </Col>
-            <Tooltip id="sqlserver"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={MariaDB} length={150} width={150} alt="mariadb" data-tooltip-id="mariadb" data-tooltip-content="MariaDB"/>
-            </Col>
-            <Tooltip id="mariadb"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={AWS_S3} length={150} width={150} alt="aws s3" data-tooltip-id="aws s3" data-tooltip-content="AWS S3"/>
-            </Col>
-            <Tooltip id="aws s3"/>
-
-            <Col xs={4} md={2} className="tech-icons">
-                <img src={Excel} length={150} width={150} alt="excel" data-tooltip-id="excel" data-tooltip-content="Excel"/>
-            </Col>
-            <Tooltip id="excel"/>
-          </Row>
-          <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        <div className="skills-section">
+          {renderSkills()}
         </div>
+        <div className="footer-space"></div>
       </Container>
     </>
+  );
+}
+
+function renderSkills() {
+  const skills = [
+    { src: Python, alt: "Python", tooltipId: "python", tooltipContent: "Python" },
+    { src: RLang, alt: "R", tooltipId: "r", tooltipContent: "R" },
+    { src: SQL, alt: "SQL", tooltipId: "sql", tooltipContent: "SQL" },
+    { src: PowerBI, alt: "Power BI", tooltipId: "power-bi", tooltipContent: "Power BI" },
+    { src: Tableau, alt: "Tableau", tooltipId: "tableau", tooltipContent: "Tableau" },
+    { src: Snowflake, alt: "Snowflake", tooltipId: "snowflake", tooltipContent: "Snowflake" },
+    { src: SAS, alt: "SAS", tooltipId: "sas", tooltipContent: "SAS" },
+    { src: SPSS, alt: "SPSS", tooltipId: "spss", tooltipContent: "SPSS" },
+    { src: LaTex, alt: "LaTex", tooltipId: "latex", tooltipContent: "LaTex" },
+    { src: MySQL, alt: "MySQL", tooltipId: "mysql", tooltipContent: "MySQL" },
+    { src: SQLServer, alt: "SQL Server", tooltipId: "sql-server", tooltipContent: "SQL Server" },
+    { src: MariaDB, alt: "MariaDB", tooltipId: "mariadb", tooltipContent: "MariaDB" },
+    { src: AWS_S3, alt: "AWS S3", tooltipId: "aws-s3", tooltipContent: "AWS S3" },
+    { src: Excel, alt: "Excel", tooltipId: "excel", tooltipContent: "Excel" }
+  ];
+
+  return (
+    <div className="skills-list">
+      {skills.map((skill, index) => (
+        <div key={index} className="skill-entry tech-icons">
+          <img src={skill.src} alt={skill.alt} data-tooltip-id={skill.tooltipId} data-tooltip-content={skill.tooltipContent} />
+          <Tooltip id={skill.tooltipId} />
+        </div>
+      ))}
+    </div>
   );
 }
 

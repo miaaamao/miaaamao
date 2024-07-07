@@ -10,7 +10,7 @@ function CourseTaken() {
         <>
             <HelmetProvider>
                 <Helmet>
-                    <title>Mia's Portfolio - Skills</title>
+                    <title>Mia's Portfolio - Courses</title>
                 </Helmet>
             </HelmetProvider>
             <Container fluid className="skills-wrapper">
