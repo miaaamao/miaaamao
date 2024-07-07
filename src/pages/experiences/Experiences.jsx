@@ -34,12 +34,12 @@ function Experiences() {
                         position='left'
                         icon={<MdWorkOutline />}
                     >
-                        <h3 className="vertical-timeline-element-title">Business Analysis Intern</h3>
+                        <h3 className="vertical-timeline-element-title">Business Analyst Intern</h3>
                         <a href="https://www.tencent.com/" style={{textDecoration: 'none'}}> <h4 className="vertical-timeline-element-subtitle">McKinsey & Company</h4> </a>
                         <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={McKinsey} width={140} height={140} alt="McKinsey"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Beijing, China</h4>
                         <p>
-                            Analyzed client group segments using Salesforce CRM and Excel, identifying barriers in Citi's services. Recommendations from this analysis led to a 25% improvement in customer satisfaction.
+                            Developed merge pipeline from Snowflake Stages to Prod tables and automated tasks in Snowflake Tasks functions and Alteryx to refresh data sources by 10% and aligned with daily ingestion data from customers' transactions.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
@@ -54,12 +54,12 @@ function Experiences() {
                         position='right'
                         icon={<MdWorkOutline />}
                     >
-                        <h3 className="vertical-timeline-element-title">Business Analysis Intern</h3>
+                        <h3 className="vertical-timeline-element-title">Portfolio Analyst Intern</h3>
                         <a href="https://www.tencent.com/" style={{textDecoration: 'none'}}> <h4 className="vertical-timeline-element-subtitle">Versailles Group</h4> </a>
                         <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={Versailles} width={140} height={140} alt="Versailles"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Boston, MA</h4>
                         <p>
-                            Conducted a comprehensive instability analysis of a leading lead-acid battery manufacturer, leveraging advanced Excel models and Python for data analysis, which helped identify critical financial trends and investment opportunities.
+                            Performed investment judgement by calculating the return on investments and applied Monte Carlo Simulations and Probability theory using Python to evaluate the relationship between each variable and measure expected results of independent events.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
@@ -74,12 +74,12 @@ function Experiences() {
                         position='left'
                         icon={<MdWorkOutline />}
                     >
-                        <h3 className="vertical-timeline-element-title">Business Analysis Intern</h3>
+                        <h3 className="vertical-timeline-element-title">Risk Assurance Intern</h3>
                         <a href="https://www.tencent.com/" style={{textDecoration: 'none'}}> <h4 className="vertical-timeline-element-subtitle">PricewaterhouseCoopers</h4> </a>
                         <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={PWC} width={140} height={140} alt="PWC"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Shanghai, China</h4>
                         <p>
-                            Utilized SAP and Tableau to enhance data visualization and analysis to enrich understanding of the bank's financial market division.
+                            Created financial valuation models in Python to analyze 5M+ historical data to track firm's productivity, market sizing, and potential growth, with goal to evaluate business values and financial worth in investment portfolio.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
