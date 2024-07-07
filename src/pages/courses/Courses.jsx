@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import '../../style.css';
+
 import DukeLogo from "../../assets/img/education/duke.png";
 import UCSBLogo from "../../assets/img/education/ucsb.png";
 
