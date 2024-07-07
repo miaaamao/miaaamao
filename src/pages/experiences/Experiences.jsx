@@ -59,7 +59,7 @@ function Experiences() {
                         <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={Versailles} width={140} height={140} alt="Versailles"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Boston, MA</h4>
                         <p>
-                            Performed investment judgement by calculating the return on investments and applied Monte Carlo Simulations and Probability theory using Python to evaluate the relationship between each variable and measure expected results of independent events.
+                            Performed investment judgments by calculating the return on investments and applied Monte Carlo Simulations and Probability theory using Python to evaluate the relationship between each variable and measure expected results of independent events.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
@@ -79,7 +79,7 @@ function Experiences() {
                         <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={PWC} width={140} height={140} alt="PWC"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Shanghai, China</h4>
                         <p>
-                            Created financial valuation models in Python to analyze 5M+ historical data to track firm's productivity, market sizing, and potential growth, with goal to evaluate business values and financial worth in investment portfolio.
+                            Created financial valuation models in Python to analyze 5M+ historical data to track the firm's productivity, market sizing, and potential growth, to evaluate business values and financial worth in investment portfolio.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
