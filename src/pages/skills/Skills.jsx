@@ -38,7 +38,7 @@ function Skills() {
             <Col xs={4} md={2} className="tech-icons">
                 <img src={Python} length={150} width={150} alt="python" data-tooltip-id="python" data-tooltip-content="Python"/>
             </Col>
-            <Tooltip id="python" place="left" />
+            <Tooltip id="python" place="left"/>
 
             <Col xs={4} md={2} className="tech-icons">
                 <img src={RLang} length={150} width={150} alt="r" data-tooltip-id="r" data-tooltip-content="R"/>
@@ -86,9 +86,9 @@ function Skills() {
             <Tooltip id="mysql" place="left"/>
 
             <Col xs={4} md={2} className="tech-icons">
-                <img src={SQLServer} length={150} width={150} alt="sql server" data-tooltip-id="sql server" data-tooltip-content="SQL Server"/>
+                <img src={SQLServer} length={150} width={150} alt="sql server" data-tooltip-id="sql_server" data-tooltip-content="SQL Server"/>
             </Col>
-            <Tooltip id="sqlserver" place="left"/>
+            <Tooltip id="sql_server" place="left"/>
 
             <Col xs={4} md={2} className="tech-icons">
                 <img src={MariaDB} length={150} width={150} alt="mariadb" data-tooltip-id="mariadb" data-tooltip-content="MariaDB"/>
