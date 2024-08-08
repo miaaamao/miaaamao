@@ -9,7 +9,7 @@ function Footer() {
     <>
       <footer className="px-4">
         <div className="foot-left d-flex">
-          <p>Copyright © {year} Mia</p>
+          <p>Copyright © 2024 - {year} Mia</p>
         </div>
         <div className="foot-right d-flex">
           <a
