@@ -7,6 +7,7 @@ import { MdWorkOutline } from "react-icons/md";
 import McKinsey from '../../assets/img/experience/mckinsey.png';
 import Versailles from '../../assets/img/experience/versailles.png';
 import PWC from '../../assets/img/experience/pwc.png';
+import MindCruise from '../../assets/img/experience/mindcruise.png';
 
 function Experiences() {
     return (
@@ -59,7 +60,7 @@ function Experiences() {
                         <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={Versailles} width={140} height={140} alt="Versailles"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Boston, MA</h4>
                         <p>
-                            Performed investment judgments by calculating the return on investments and applied Monte Carlo Simulations and Probability theory using Python to evaluate the relationship between each variable and measure expected results of independent events.
+                            Performed investment judgments by calculating the return on investments and applied Monte Carlo Simulations and Probability theory using Python to evaluate the relationship between each variable and measure the expected results of independent events.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
@@ -76,10 +77,30 @@ function Experiences() {
                     >
                         <h3 className="vertical-timeline-element-title">Risk Assurance Intern</h3>
                         <a href="https://www.tencent.com/" style={{textDecoration: 'none'}}> <h4 className="vertical-timeline-element-subtitle">PricewaterhouseCoopers</h4> </a>
-                        <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={PWC} width={140} height={140} alt="PWC"/></a>
+                        <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={PWC} width={140} height={140} alt="PwC"/></a>
                         <h4 className="vertical-timeline-element-subtitle">Shanghai, China</h4>
                         <p>
-                            Created financial valuation models in Python to analyze 5M+ historical data to track the firm's productivity, market sizing, and potential growth, to evaluate business values and financial worth in investment portfolio.
+                            Created financial valuation models in Python to analyze 5M+ historical data to track the firm’s productivity, market sizing, and potential growth to evaluate business values and financial worth in the investment portfolio.
+                        </p>
+                    </VerticalTimelineElement>
+                </VerticalTimeline>
+
+                <VerticalTimeline lineColor="#F5F5F5"> 
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        date="June 2020 - September 2020"
+                        contentStyle={{ border: '#accce6', boxShadow: '4px 5px 4px 3px #a7cbe8' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
+                        iconStyle={{ background: '#75aadb', color: '#fff' }}
+                        position='right'
+                        icon={<MdWorkOutline />}
+                    >
+                        <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
+                        <a href="https://www.tencent.com/" style={{textDecoration: 'none'}}> <h4 className="vertical-timeline-element-subtitle">MindCruise Technology</h4> </a>
+                        <a href="https://www.tencent.com/"> <img className="vertical-timeline-element-image" src={MindCruise} width={140} height={140} alt="MindCruise"/></a>
+                        <h4 className="vertical-timeline-element-subtitle">Shanghai, China</h4>
+                        <p>
+                            Collaborated with product engineer team to design and implement full life cycle A/B tests; Defined key metrics and sampling methodologies to evaluate the impact of algorithmic changes on system performance, resulting in a 5% improvement in accuracy.
                         </p>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
